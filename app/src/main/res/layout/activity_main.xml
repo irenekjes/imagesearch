@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainSearchBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/mainSearchEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/mainSearchBtn"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:maxLines="1"
+            android:hint="검색 키워드를 입력해주세요."
+            android:textSize="15dp"
+            android:layout_centerVertical="true"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/mainSearchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="go"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mainImageRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainSearchBox"
+        android:layout_marginTop="5dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+</RelativeLayout>
